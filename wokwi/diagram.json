@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "author": "Agent Farmer FRIDAY",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht", "top": -120, "left": 200, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "soil", "top": 130, "left": 200, "attrs": { "label": "Soil moisture" } }
+  ],
+  "connections": [
+    [ "uno:5V", "dht:VCC", "red", [] ],
+    [ "uno:GND.1", "dht:GND", "black", [] ],
+    [ "uno:2", "dht:SDA", "green", [] ],
+    [ "uno:5V", "soil:VCC", "red", [] ],
+    [ "uno:GND.2", "soil:GND", "black", [] ],
+    [ "uno:A0", "soil:SIG", "blue", [] ]
+  ]
+}
